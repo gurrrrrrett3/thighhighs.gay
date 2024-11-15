@@ -6,6 +6,7 @@ body {
 	background-color: #111;
 	color: #fff;
 	font-family: "Roboto Mono", monospace;
+	margin: 20px;
 }
 
 a {
@@ -61,14 +62,16 @@ img {
 }
 
 .frame-container {
-	display: flex;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: auto;
+	display: grid;
 	justify-content: center;
 	align-items: center;
 }
 
 .frame {
-	width: 50%;
-	height: 100%;
+	justify-self: stretch;
+	align-self: stretch;
 	border: 0;
 	margin: 8px;
 	padding: 20px;
