@@ -10,6 +10,11 @@ export default defineConfig({
         sourcemap: true,
         rollupOptions: {
             input: "client/index.html",
+            output: {
+                entryFileNames: "index.js",
+                chunkFileNames: "chunks/[name]-[hash].js",
+                assetFileNames: "assets/[hash].[ext]"
+            }
         }
     },
     optimizeDeps: {
