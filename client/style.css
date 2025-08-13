@@ -120,3 +120,37 @@ img {
 		opacity: 1;
 	}
 }
+
+.image-viewer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	animation: viewerfadein 0.2s;
+}
+
+.image-viewer img {
+	max-width: 90%;
+	max-height: 90%;
+	border-radius: 16px;
+}
+
+.fade-out {
+	opacity: 0;
+	transition: opacity 0.3s ease-in;
+}
+
+@keyframes viewerfadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
