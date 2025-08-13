@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img").forEach(img => {
+        if (img.parentElement?.hasAttribute("href")) return
         img.addEventListener("mouseenter", () => {
             const viewer = document.createElement("div");
             viewer.classList.add("image-viewer");
